@@ -15,3 +15,8 @@ The theater owner also wants to keep track of her sales, so the order informatio
 We're not worried about custom visual design, so feel free to use any CSS framework, or roll your own. However, we need the site to work on mobile, so keep that in mind.
 
 There are many ways to code this challenge, so we'd like to see your thought processes in the app's Readme file. 
+
+# Plan
+
+- create Rails app with PostgreSQL database - as will deploy to Heroku
+- set up database with figaro env files

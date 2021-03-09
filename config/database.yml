@@ -17,13 +17,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
+  port: 5432
   # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: postgres
+  password: <%= ENV['DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
   database: launchpad_cinemas_development
+  username: postgres
+  password: <%= ENV[ "DATABASE_PASSWORD" ] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

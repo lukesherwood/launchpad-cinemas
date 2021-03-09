@@ -23,6 +23,6 @@ There are many ways to code this challenge, so we'd like to see your thought pro
 - Models - 
   - Users - name, email, has_many orders
   - auditoriums has many showings, has many movies through showings, name
-  - showings - belongs_to auditoriums, has many users through orders, time, has_one movie, 
+  - showings - belongs_to auditoriums, has many users through orders, time, has_one movie, has_many orders
   - Movies - title, showtime, auditoriums, has_many showings, has many users through showings
   - Orders - belongs_to showing, belongs_to_users, datetime

@@ -15,7 +15,7 @@ ActiveStorage.start()
 
 $(document).ready(function() {
     $('[data-js-hide-link]').click(function(event){
-      $('[edit-capacity-form]').toggle()
+      $('#edit_auditorium_1').toggle()
       event.preventDefault(); 
     });
   })

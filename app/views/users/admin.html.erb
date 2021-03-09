@@ -8,12 +8,13 @@
         <div class='card-title' style="font-size: 18pt;"><%= aud.name %></div>
         <div class='card-body'>
         <div>
-        <%= simple_form_for aud, class:"edit-capacity-form" do |f| %>
+        Capacity: <%= aud.capacity %>
+        <%= simple_form_for aud, html: {style:"display: none;"} do |f| %>
             <%= f.input :capacity %>
             <%= f.button :submit, class: 'btn btn-primary' %>
+        </div>
+         <%= link_to "Toggle form", "", class: 'hide', data: {'js-hide-link' => true} %>
         <% end %>
-        
-        <%#</div> <%= link_to "Hide", "", class: 'hide', data: {'js-hide-link' => true} %>
         <div><b>Showings:</b> 
             <ul>
                 <% aud.showings.each do |showing| %>

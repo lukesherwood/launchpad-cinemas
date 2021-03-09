@@ -20,3 +20,9 @@ There are many ways to code this challenge, so we'd like to see your thought pro
 
 - create Rails app with PostgreSQL database - as will deploy to Heroku
 - set up database with figaro env files
+- Models - 
+  - Users - name, email, has_many orders, has_many auditoriums, 
+  - auditoriums has many showings, has many movies through showings, belongs to user, name, 
+  - showings - belongs_to auditoriums, has many users through orders, time, has_one movie, 
+  - Movies - title, showtime, auditoriums, has_many showings, has many users through showings
+  - Orders - belongs_to showing, belongs_to_users, datetime

@@ -1,18 +1,21 @@
 <h1>Welcome to Launchpad Cinemas</h1>
 
 <h3>These are our current movies</h3>
-<ul>
+<ul class="cards col-6">
    <% @movies.each do |movie| %> 
-    <li>
+    <li class='card'>
         <%# image url to be added%>
-        <div><b>Title:</b> <%= movie.title %></div>
+        <div class='card-title'><b>Title:</b> <%= movie.title %></div>
+        <div class='card-body'>
         <div><b>Description:</b> <%= movie.description %></div>
         <div><b>Showing at:</b> 
             <ul>
                 <% movie.showings.each do |showing| %>
                     <li><%=showing.datetime  %></li>
+                    <button type="button" class="btn btn-primary btn-sm">Get Tickets</button>
                 <% end%>
             </ul>
+        </div>
         </div>
         <%# seats available: %>
     </li>

@@ -31,3 +31,4 @@ There are many ways to code this challenge, so we'd like to see your thought pro
   - admin page - create auditoriums, create movies, create/edit showings
   - movies all page with showings if not at capacity
   - showing show page with modal form for purchasing of ticket
+  - navbar for easy navigation

@@ -12,3 +12,10 @@ import 'bootstrap'
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+$(document).ready(function() {
+    $('[data-js-hide-link]').click(function(event){
+      $('[edit-capacity-form]').toggle()
+      event.preventDefault(); 
+    });
+  })

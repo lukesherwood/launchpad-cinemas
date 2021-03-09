@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   resources :movies
   resources :showings
   resources :auditoria
-  resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+  get '/users/admin', to: 'users#admin'
   get '/', to: "application#index"
 end

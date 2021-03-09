@@ -1,0 +1,39 @@
+<h1>ADMIN only page</h1>
+
+<h3>Auditoriums</h3>
+<ul class="cards col-6">
+   <% @auditoriums.each do |aud| %> 
+    <li class='card'>
+        <%# image url to be added%>
+        <div class='card-title' style="font-size: 18pt;"><%= aud.name %></div>
+        <div class='card-body'>
+        <div>
+        <%= simple_form_for aud, class:"edit-capacity-form" do |f| %>
+            <%= f.input :capacity %>
+            <%= f.button :submit, class: 'btn btn-primary' %>
+        <% end %>
+        
+        <%#</div> <%= link_to "Hide", "", class: 'hide', data: {'js-hide-link' => true} %>
+        <div><b>Showings:</b> 
+            <ul>
+                <% aud.showings.each do |showing| %>
+                    <li>
+                    <div><%= showing.datetime %></div>
+                    <div><%= showing.movie.title %></div>
+                    
+                    </li>
+                    
+
+                    <%= link_to "Edit Showing", edit_showing_path(showing), class:"btn btn-outline-warning btn-sm" %>
+                <% end%>
+            </ul>
+        </div>
+        </div>
+        <%# seats available: %>
+    </li>
+   <% end%>
+</ul>
+<div class="btn-group">
+    <%= link_to "Add Auditorium", new_auditorium_path, class:"btn btn-outline-primary btn-sm" %> <br>
+    <%= link_to "Add Showing", new_showing_path, class:"btn btn-outline-primary btn-sm" %>
+</div>

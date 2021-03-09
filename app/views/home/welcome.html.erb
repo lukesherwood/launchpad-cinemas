@@ -1,0 +1,20 @@
+<h1>Welcome to Launchpad Cinemas</h1>
+
+<h3>These are our current movies</h3>
+<ul>
+   <% @movies.each do |movie| %> 
+    <li>
+        <%# image url to be added%>
+        <div><b>Title:</b> <%= movie.title %></div>
+        <div><b>Description:</b> <%= movie.description %></div>
+        <div><b>Showing at:</b> 
+            <ul>
+                <% movie.showings.each do |showing| %>
+                    <li><%=showing.datetime  %></li>
+                <% end%>
+            </ul>
+        </div>
+        <%# seats available: %>
+    </li>
+   <% end%>
+</ul>

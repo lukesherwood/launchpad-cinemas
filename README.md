@@ -29,5 +29,5 @@ There are many ways to code this challenge, so we'd like to see your thought pro
 
 - basic site setup -
   - admin page - create auditoriums, create movies, create/edit showings
-  - movies page with showings if not at capacity
-  - showing page with modal form for purchasing of ticket
+  - movies all page with showings if not at capacity
+  - showing show page with modal form for purchasing of ticket

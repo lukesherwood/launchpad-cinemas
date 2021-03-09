@@ -25,4 +25,9 @@ There are many ways to code this challenge, so we'd like to see your thought pro
   - auditoriums has many showings, has many movies through showings, name
   - showings - belongs_to auditorium, has many users through orders, time, belongs_to movie, has_many orders
   - Movies - title, showtime, has many auditoriums through showings, has_many showings
-  - Orders - belongs_to showing, belongs_to_users, datetime
+  - Orders - belongs_to showing, belongs_to_user
+
+- basic site setup -
+  - admin page - create auditoriums, create movies, create/edit showings
+  - movies page with showings if not at capacity
+  - showing page with modal form for purchasing of ticket

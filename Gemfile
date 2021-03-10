@@ -30,7 +30,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem "figaro"
 gem 'simple_form'
-gem 'bootstrap'
 
 
 group :development, :test do

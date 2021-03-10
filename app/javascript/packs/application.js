@@ -19,3 +19,9 @@ $(document).ready(function() {
       event.preventDefault(); 
     });
   })
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').remove();
+  }, 5000);
+  })

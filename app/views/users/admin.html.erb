@@ -13,7 +13,7 @@
             <%= f.input :capacity %>
             <%= f.button :submit, class: 'btn btn-primary' %>
         </div>
-         <%= link_to "Toggle form", "", class: 'hide', data: {'js-hide-link' => true} %>
+         <%= link_to "Update Capacity", "", class: 'hide', data: {'js-hide-link' => true} %>
         <% end %>
         <div><b>Showings:</b> 
             <ul>
@@ -21,10 +21,7 @@
                     <li>
                     <div><%= showing.datetime %></div>
                     <div><%= showing.movie.title %></div>
-                    
                     </li>
-                    
-
                     <%= link_to "Edit Showing", edit_showing_path(showing), class:"btn btn-outline-warning btn-sm" %>
                 <% end%>
             </ul>
@@ -35,6 +32,6 @@
    <% end%>
 </ul>
 <div class="btn-group">
-    <%= link_to "Add Auditorium", new_auditorium_path, class:"btn btn-outline-primary btn-sm" %> <br>
+    <%= link_to "Add Auditorium", new_auditorium_path, class:"btn btn-outline-primary btn-sm" %>
     <%= link_to "Add Showing", new_showing_path, class:"btn btn-outline-primary btn-sm" %>
 </div>

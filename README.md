@@ -28,7 +28,7 @@ There are many ways to code this challenge, so we'd like to see your thought pro
   - Orders - belongs_to showing, belongs_to_user
 
 - basic site setup -
-  - admin page - create auditoriums, create movies, create/edit showings
+  - admin page - edit capacity, create auditoriums, create/edit showings
   - movies all page with showings if not at capacity
   - showing show page with modal form for purchasing of ticket
   - navbar for easy navigation

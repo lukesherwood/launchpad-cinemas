@@ -1,0 +1,10 @@
+<h1>Edit Showing</h1>
+
+<%= simple_form_for [@showing] do |f| %>
+    <%= f.input :time, :as => :datetime %>
+    <%= f.input :auditorium_id, as: :select, collection: @auditoriums, prompt: 'Select Auditorium', label: false %>
+    <%= f.button :submit, class:"btn btn-primary" %>
+    </div>
+<% end%>
+
+<%#Dropdowns for auditorium and movies%>

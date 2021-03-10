@@ -32,3 +32,9 @@ There are many ways to code this challenge, so we'd like to see your thought pro
   - movies all page with showings if not at capacity
   - showing show page with modal form for purchasing of ticket
   - navbar for easy navigation
+
+## Issues
+
+datetime picker showing hours wrong
+forms break when not submitted correctly
+add required to forms and check errors work correctly

@@ -1,4 +1,18 @@
 class AuditoriaController < ApplicationController
+
+    def new
+        @auditorium = Auditorium.new
+    end
+
+    def create
+        @auditorium = Auditorium.new(auditorium_params)
+        if @auditorium.save
+            redirect_to :users_admin
+        else
+            render 'new'
+        end
+    end
+
     def update
         @auditorium = Auditorium.find(params[:id])
         if @auditorium.update(auditorium_params)

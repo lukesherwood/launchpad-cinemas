@@ -7,7 +7,7 @@ class AuditoriaController < ApplicationController
     def create
         @auditorium = Auditorium.new(auditorium_params)
         if @auditorium.save
-            redirect_to :users_admin
+            redirect_to :users_admin, notice: "Successfully created an auditorium"
         else
             render 'new'
         end

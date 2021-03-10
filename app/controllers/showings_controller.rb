@@ -9,7 +9,7 @@ class ShowingsController < ApplicationController
     def create
         @showing = Showing.new(showing_params)
         if @showing.save
-            redirect_to :users_admin
+            redirect_to :users_admin, notice: "Successfully created a showing"
         else
             render 'new'
         end

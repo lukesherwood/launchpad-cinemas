@@ -5,6 +5,11 @@ class OrdersController < ApplicationController
         @user = User.new
     end
 
+    def index
+        @showing = Showing.find(params[:showing_id])
+        @orders = @showing.orders
+    end
+
     def create
         @showing = Showing.find(params[:showing_id])
         @user = User.new(order_params[:user])

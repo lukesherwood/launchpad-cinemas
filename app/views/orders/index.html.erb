@@ -1,0 +1,15 @@
+<h3>Order information for <%= @showing.movie.title %> showing at: <%= @showing.datetime %></h3>
+
+<div>Auditorium: <%= @showing.auditorium.name %></div>
+<div>Capacity: <%= @showing.auditorium.capacity %></div>
+<div>Seats remaining: <%= @showing.number_of_seats_remaining %></div>
+
+<ol>
+<% @orders.each do |order| %>
+    <li>
+    
+    <div>Purchased by: <%= order.user.name %></div>
+    <div>User email: <%= order.user.email %></div>
+    </li>
+<% end%>
+</ol>

@@ -30,11 +30,12 @@ There are many ways to code this challenge, so we'd like to see your thought pro
 - basic site setup -
   - admin page - edit capacity, create auditoriums, create/edit showings
   - movies all page with showings if not at capacity
-  - showing show page with modal form for purchasing of ticket
+  - showing ticket purchase form
   - navbar for easy navigation
 
 ## Issues
-
-order form doesn't validate, need to add credit card entry
+404 page should render if wrong url
+cc details need better validation
+no navbar
 remove all extraneous routes
 datetime picker showing hours wrong

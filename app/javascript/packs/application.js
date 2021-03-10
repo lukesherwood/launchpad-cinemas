@@ -15,13 +15,15 @@ ActiveStorage.start()
 
 $(document).ready(function() {
     $('[data-js-hide-link]').click(function(event){
-      $('#edit_auditorium_1').toggle()
-      event.preventDefault(); 
+      event.preventDefault();
+      var id = event.target.getAttribute('key')
+      $("#edit_auditorium_" + id).toggle()
+      console.log(event.target.getAttribute('key'))
     });
   })
 
-$(document).ready(function(){
-  setTimeout(function(){
-    $('.alert').remove();
-  }, 5000);
-  })
+// $(document).ready(function(){
+//   setTimeout(function(){
+//     $('.alert').remove();
+//   }, 5000);
+//   })

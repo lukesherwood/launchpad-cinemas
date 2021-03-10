@@ -12,9 +12,10 @@
         <%= simple_form_for aud, html: {style:"display: none;"} do |f| %>
             <%= f.input :capacity %>
             <%= f.button :submit, class: 'btn btn-primary' %>
-        </div>
-         <%= link_to "Update Capacity", "", class: 'hide', data: {'js-hide-link' => true} %>
         <% end %>
+        <%= link_to "Update Capacity", "", class: 'hide capacity-form-toggle', key:aud.id, data: {'js-hide-link' => true} %>
+        </div>
+
         <div><b>Showings:</b> 
             <ul>
                 <% aud.showings.each do |showing| %>

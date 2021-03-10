@@ -15,7 +15,8 @@ class OrdersController < ApplicationController
             redirect_to '/', notice: "Successfully created an order"
             #email confirmation to user.email
         else
-            redirect_to new_showing_order_path(@showing), alert: 'Unsuccessful order, please try again. *name and email is required'
+            # redirect_to new_showing_order_path(@showing), alert: 'Unsuccessful order, please try again. *name and email is required'
+            render 'new'
         end
     end
 

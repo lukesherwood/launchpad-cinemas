@@ -18,12 +18,9 @@ $(document).ready(function() {
       event.preventDefault();
       var id = event.target.getAttribute('key')
       $("#edit_auditorium_" + id).toggle()
-      console.log(event.target.getAttribute('key'))
     });
-  })
 
-// $(document).ready(function(){
-//   setTimeout(function(){
-//     $('.alert').remove();
-//   }, 5000);
-//   })
+    setTimeout(function(){
+      $('.alert').remove();
+    }, 5000);
+  })

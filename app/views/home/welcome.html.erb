@@ -11,7 +11,11 @@
         <div><b>Showing at:</b> 
             <ul>
                 <% movie.showings.each do |showing| %>
-                    <li><%=showing.datetime  %></li>
+                    <li>
+                    <div><%=showing.datetime  %></div>
+                    <div>Theatre: <%=showing.auditorium.name  %></div>
+                    </li>
+
                     <%# <button type="button" class="btn btn-primary btn-sm get-tickets" data-toggle="modal" data-target="#exampleModal">Get Tickets</button> %>
                     <%= link_to "Get Tickets", new_showing_order_path(showing), class:"btn btn-outline-primary btn-sm" %>
                 <% end%>

@@ -35,6 +35,6 @@ There are many ways to code this challenge, so we'd like to see your thought pro
 
 ## Issues
 
+order form doesn't validate, need to add credit card entry
+remove all extraneous routes
 datetime picker showing hours wrong
-forms break when not submitted correctly
-add required to forms and check errors work correctly

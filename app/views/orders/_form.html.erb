@@ -1,0 +1,13 @@
+<%= simple_form_for [@showing, @order], :validate => true do |f| %>
+    <div class='user'>
+        <%= f.simple_fields_for @user, :validate => true do |u| %>
+                <%= u.input :name, autofocus: true, error: 'Name is mandatory, please specify one', required: true %>
+                  <%= f.error :name, id: 'user_name_error' %>
+                <%= u.input :email, as: :email, required: true %>
+                    <%= f.error :email, id: 'email_error' %>
+        <% end%>
+        <%= f.hidden_field :showing_id, value: @showing.id %>
+    </div>
+    <%= f.button :submit, class:"btn btn-primary" %>
+    </div>
+<% end%>

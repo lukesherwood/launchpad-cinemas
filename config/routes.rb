@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :orders
+  
   resources :movies
-  resources :showings
+  resources :showings do 
+    resources :orders do
+      resources :users
+    end
+  end
   resources :auditoria
   get '/users/admin', to: 'users#admin'
   get '/', to: "application#index"

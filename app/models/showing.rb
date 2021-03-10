@@ -8,4 +8,13 @@ class Showing < ApplicationRecord
   def datetime
     self.time.strftime("%m:%M %p, %A %e %B, %Y")
   end
+
+  def number_of_seats_remaining
+    self.auditorium.capacity - self.orders.length
+  end
+
+  def sold_out?
+    number_of_seats_remaining <= 0
+  end
+
 end

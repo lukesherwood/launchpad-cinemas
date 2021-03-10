@@ -1,10 +1,10 @@
 <h1>Welcome to Launchpad Cinemas</h1>
 
 <h3>These are our current movies</h3>
-<ul class="cards col-6">
+<ul class="cards col-xs-12 col-md-6">
    <% @movies.each do |movie| %> 
     <li class='card'>
-        <%# image url to be added%>
+        <img class="card-img-top" src= <%= movie.image %>> </>
         <div class='card-title'><b>Title:</b> <%= movie.title %></div>
         <div class='card-body'>
         <div><b>Description:</b> <%= movie.description %></div>
@@ -14,15 +14,19 @@
                     <li>
                     <div><%=showing.datetime  %></div>
                     <div>Theatre: <%=showing.auditorium.name  %></div>
+                    
                     </li>
-
-                    <%# <button type="button" class="btn btn-primary btn-sm get-tickets" data-toggle="modal" data-target="#exampleModal">Get Tickets</button> %>
-                    <%= link_to "Get Tickets", new_showing_order_path(showing), class:"btn btn-outline-primary btn-sm" %>
+                    <% if !showing.sold_out?%>
+                        <div>Seats available:<%= showing.number_of_seats_remaining  %></div>
+                        <%= link_to "Get Tickets", new_showing_order_path(showing), class:"btn btn-primary btn-sm" %>
+                    <% else%>
+                        <div class="sold-out">Sorry Sold out</div>
+                    <% end%>
                 <% end%>
             </ul>
         </div>
         </div>
-        <%# seats available: %>
+        
     </li>
    <% end%>
 </ul>

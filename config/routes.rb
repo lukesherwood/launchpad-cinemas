@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  
-  resources :movies
-  resources :showings do 
-    resources :orders do
-      resources :users
-    end
+
+  resources :showings, only: [:new, :create, :edit, :update] do 
+    resources :orders, only: [:new, :create, :index]
   end
-  resources :auditoria
+  resources :auditoria, only: [:new, :create, :update]
+
   get '/users/admin', to: 'users#admin'
   get '/', to: "application#index"
 end

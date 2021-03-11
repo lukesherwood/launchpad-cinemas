@@ -33,9 +33,4 @@ There are many ways to code this challenge, so we'd like to see your thought pro
   - showing ticket purchase form
   - navbar for easy navigation
 
-## Issues
-404 page should render if wrong url
-cc details need better validation
-no navbar
-remove all extraneous routes
-datetime picker showing hours wrong
+

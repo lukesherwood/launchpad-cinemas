@@ -1,14 +1,12 @@
 <%= simple_form_for [@showing, @order] do |f| %>
     <div class='user'>
         <%= f.simple_fields_for @user do |u| %>
-                <%= u.input :name%>
-                <%= u.input :email, as: :email %>
+            <%= u.input :name%>
+            <%= u.input :email, as: :email %>
         <% end%>
-        <%= f.input :credit_card_number%>
-        <%= f.input :credit_card_expiry, hint: 'Please enter in format MM/YY'%>
-        <%= f.hidden_field :showing_id, value: @showing.id %>
     </div>
-
+    <%= f.input :credit_card_number%>
+    <%= f.input :credit_card_expiry, hint: 'Please enter in format MM/YY'%>
+    <%= f.hidden_field :showing_id, value: @showing.id %>
     <%= f.button :submit, class:"btn btn-primary" %>
-    </div>
 <% end%>

@@ -3,30 +3,28 @@
 <h3>These are our current movies</h3>
 <ul class="cards col-xs-12 col-lg-6">
    <% @movies.each do |movie| %> 
-    <li class='card'>
-        <img class="card-img-top" src= <%= movie.image %>> </>
-        <div class='card-title'><b>Title:</b> <%= movie.title %></div>
-        <div class='card-body'>
-        <div><b>Description:</b> <%= movie.description %></div>
-        <div><b>Showing at:</b> 
-            <ul>
-                <% movie.showings.each do |showing| %>
-                    <li>
-                    <div><%=showing.datetime  %></div>
-                    <div>Theatre: <%=showing.auditorium.name  %></div>
-                    
-                    </li>
-                    <% if !showing.sold_out?%>
-                        <div>Seats available: <%= showing.number_of_seats_remaining  %></div>
-                        <%= link_to "Get Tickets", new_showing_order_path(showing), class:"btn btn-primary btn-sm" %>
-                    <% else%>
-                        <div class="sold-out">Sold out</div>
-                    <% end%>
-                <% end%>
-            </ul>
-        </div>
-        </div>
-        
-    </li>
+        <li class='card'>
+            <img class="card-img-top" src= <%= movie.image %>> </>
+            <div class='card-title'><b>Title:</b> <%= movie.title %></div>
+            <div class='card-body'>
+                <div><b>Description:</b> <%= movie.description %></div>
+                <div><b>Showing at:</b> 
+                    <ul>
+                        <% movie.showings.each do |showing| %>
+                            <li>
+                                <div><%=showing.datetime  %></div>
+                                <div>Theatre: <%=showing.auditorium.name  %></div>
+                            </li>
+                            <% if !showing.sold_out?%>
+                                <div>Seats available: <%= showing.number_of_seats_remaining  %></div>
+                                <%= link_to "Get Tickets", new_showing_order_path(showing), class:"btn btn-primary btn-sm" %>
+                            <% else%>
+                                <div class="sold-out">Sold out</div>
+                            <% end%>
+                        <% end%>
+                    </ul>
+                </div>
+            </div>
+        </li>
    <% end%>
 </ul>

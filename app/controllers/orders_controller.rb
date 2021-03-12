@@ -10,6 +10,10 @@ class OrdersController < ApplicationController
 		@orders = @showing.orders
 	end
 
+	def all_orders
+		@orders = Order.all
+	end
+
 	def create
 		@showing = Showing.find(params[:showing_id])
 		if @showing.sold_out?

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   get '/users/admin', to: 'users#admin'
   get '/', to: "application#index"
+  get '/orders/index', to: "orders#all_orders"
 end

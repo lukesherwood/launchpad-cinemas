@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
 			@order.showing = @showing
 			if @showing.save && @user.save && @order.save
 				redirect_to '/', notice: "Successfully created an order"
-				OrderMailer.with(user: @user).order_confirmation.deliver_now
+				OrderMailer.with(user: @user).order_confirmation.deliver_later
 			else
 				render 'new'
 			end

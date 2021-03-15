@@ -131,6 +131,4 @@ Rails.application.configure do
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
-
-  config.require_master_key = true
 end

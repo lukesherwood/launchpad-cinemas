@@ -92,5 +92,4 @@ config.exceptions_app = self.routes
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
-
 end
